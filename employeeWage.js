@@ -61,6 +61,12 @@ function empDailyWage(dailyWage)
 let mapDayWithWageArr = empDailyWageArr.map(empDailyWage);
 console.log(" Daily Wage Map" + mapDayWithWageArr);
 
-let fulltimeWage = (dailyWage) => dailyWage.includes("160");
+//show Days when full time wage of 160 were earned
+let fulltimeWage = (dailyWage) => dailyWage.includes("400");
 let fullDayWageArr = mapDayWithWageArr.filter(fulltimeWage);
 console.log(" Daily Wage filter when full wage earned" + fullDayWageArr);
+
+//full time wage was earned using find function
+let findFullTimeWage =(dailyWage) => dailyWage.includes("160");
+let findFullTimeWageArr = mapDayWithWageArr.find(findFullTimeWage);
+console.log("First time full time wage earned on Day: "+ findFullTimeWageArr);
